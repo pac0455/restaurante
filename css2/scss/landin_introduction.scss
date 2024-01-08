@@ -1,0 +1,145 @@
+
+.container_landin {
+    --image_width: 12vw;
+    --image_height: calc(var(--image_width) * 2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: end;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        max-width: 50vw;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(245, 245, 220, 0.354);
+        padding: 15px;
+        border-radius: 50px;
+        .left_text {
+            max-width: 50%;
+            font-size: 40px;
+            font-family: 'Itim';
+            text-align: center;
+        }
+
+        .search {
+            padding-left: 6px;
+            --search_width: 400px;
+            --seacrh_height: 40px;
+            width: var(--search_width);
+            height: var(--seacrh_height);
+            position: relative;
+            top: 0;
+            left: 0;
+            border: var(--purple) solid 2px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            .search_input {
+                width: 70%;
+                border: none;
+                outline: none;
+                border: none;
+            }
+
+            &::before {
+                cursor: pointer;
+                --size: 35px;
+                position: absolute;
+                top: calc(var(--seacrh_height) - var(--size)*1.1);
+                left: calc(var(--search_width) - var(--size)*1.1);
+                width: var(--size);
+                height: var(--size);
+                background-color: red;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 500ms;
+
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font: var(--fa-font-solid);
+                content: "\f002";
+                font-size: 1.2rem;
+            }
+
+            &:hover::before {
+                transition: 500ms;
+                box-shadow: 2px 2px 20px;
+            }
+        }
+
+
+    }
+
+    .rigth {
+        display: flex;
+        align-items: end;
+        gap: 2vw;
+        justify-content: start;
+        flex-direction: row;
+
+        .link_landin {
+            cursor: pointer;
+
+            .link_landin_text {
+                padding: 5px;
+                transform: rotate(-25deg);
+                background-color: var(--red);
+                z-index: 1;
+                position: relative;
+                top: calc((var(--image_height) * -1));
+                left: calc(var(--image_width) * -0.4);
+                border-radius: 30px;
+                color: white;
+                font-size: 30px;
+                font-family: 'Itim';
+                text-align: center;
+            }
+        }
+
+        .image {
+            --rotate: -25deg;
+            transform: rotate(var(--rotate));
+            width: var(--image_width);
+            height: var(--image_height);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50px;
+        }
+
+        #link_landin1 .image {
+            background-image: url(../../img/rata.jpg);
+        }
+
+        #link_landin2 .image {
+            background-image: url(../../img/kebab.jpg);
+        }
+
+        #link_landin3 .image {
+            background-image: url(../../img/durum.jpg);
+        }
+
+        #link_landin1 .link_landin_text {
+            box-shadow: 5px 5px 20px var(--purple);
+            background-color: var(--red);
+        }
+
+        #link_landin2 .link_landin_text {
+            background-color: var(--purple);
+            box-shadow: 5px 5px 20px var(--purple);
+            top: calc((var(--image_width) - var(--image_height)) * 0.2);
+            left: calc(var(--image_width) * 0.3);
+        }
+
+        #link_landin3 .link_landin_text {
+            box-shadow: 5px 5px 20px var(--purple);
+            background-color: var(--dark_purple);
+            left: calc(var(--image_width) * -0.25);
+        }
+    }
+}

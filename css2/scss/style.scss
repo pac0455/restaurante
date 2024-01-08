@@ -1,0 +1,72 @@
+@forward 'header.scss';
+@forward 'landin_introduction.scss';
+@forward 'landin_paid.scss';
+@forward 'menu.scss';
+@forward 'paid_page.scss';
+@forward 'login.scss';
+@forward 'footer.scss';
+@forward 'carrusel.scss';
+@forward 'galeria.scss';
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+$colors: (
+    orange: #FF8800,
+    yellow: #FFB300,
+    red: #F5061D,
+    purple: #C0012A,
+    dark_purple_a: #94053298,
+    dark_purple: #940533
+);
+
+:root {
+    @each $color, $value in $colors {
+        --#{$color}: #{$value};
+    }
+}
+    /* ===== Scrollbar CSS ===== */
+    /* Firefox */
+    * {
+        scrollbar-width: none;
+        scrollbar-color: #000000 #ffffff;
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 10px;
+
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--dark_purple);
+        border-radius: 20px;
+        border: 0px none #ffffff;
+    }
+body {
+    overflow-x: hidden;
+    margin: 0;
+    background-attachment: fixed;
+    background: url(./../../img/fondo.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(0.5rem);
+    min-height: 100vh;
+
+    .app {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 99vh;
+        gap: 90px;
+    }
+
+
+}

@@ -1,0 +1,70 @@
+.landin_paid {
+    min-height: 30vh;
+    border-radius: 30px 30px 20px 20p;
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.pedir-ya {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landin_paid_text {
+    font-size: 4rem;
+    color: white;
+    font-family: 'Itim';
+    margin: 0;
+}
+
+.landin_paid button {
+    font-size: 2rem;
+    background-color: black;
+    outline: none;
+    border: none;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.landin_paid button:active {
+    box-shadow: 5px 5px 15px black;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    rotate: -10deg;
+
+}
+
+.productos>div {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.productos>#image1 {
+    background: url(./../../img/kebab.jpg);
+}
+
+.productos>#image2 {
+    background: url(./../../img/patatas_queso.jpg);
+
+
+}
+
+.productos>#image3 {
+    background: url(./../../img/hamburguesa.jpg);
+
+}
+
+.productos>#image4 {
+    background: url(./../../img/pizzaturca.jpg);
+}

@@ -1,0 +1,116 @@
+nav{
+    background-color: rgba(255, 255, 255, 0.339);
+}
+.menu {
+
+    --width_comida: 75vw;
+    --wifth_carta: 25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .comida {
+        display: flex;
+        gap: 10%;
+        row-gap: 50px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: var(--width_comida);
+        background-color: rgba(255, 0, 0, 0);
+        padding: 0px 15px 0 15px;
+
+        .comida_card {
+            --width_comida_card: 250px;
+            --height_comida_card: 350px;
+            width: var(--width_comida_card);
+            height: var(--height_comida_card);
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10px;
+            justify-content: space-around;
+            background: var(--purple);
+            border-radius: 30px;
+
+            &>.imagen {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                border-radius: 20px;
+                height: 500px;
+            }
+
+            &>.descripcion {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                color: white;
+
+                &>:is(.nombre, .contenido, .precio) {
+                    display: flex;
+                    justify-content: center;
+                    font-family: 'Itim';
+                }
+
+                & .contenido {
+                    text-align: center;
+                }
+
+                &>.precio a {
+                    text-decoration: none;
+
+                    min-width: 50%;
+
+                    &>button {
+                        color: white;
+                        border: none;
+                        width: 100%;
+                        padding: 5px;
+                        cursor: pointer;
+                        background-color: var(--dark_purple);
+                    }
+                }
+            }
+        }
+    }
+
+    .carta {
+        width: var(--wifth_carta);
+        background-color: var(--red);
+        padding: 20px 5px 0 20px;
+        border-radius: 10px;
+        margin-right: 1vw;
+        min-height: 80vh;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            label {
+                cursor: pointer;
+                min-height: 2rem;
+                background-color: var(--purple);
+                width: 95%;
+                height: 50px;
+                padding: 5px;
+                padding-left: 10px;
+                display: flex;
+                align-items: center;
+                color: white;
+                font-family: 'Itim';
+                border-radius: 10px;
+                transition: 500ms;
+            }
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]:checked+label {
+            transform: translateX(-15%);
+            transition: 500ms;
+            background-color: var(--dark_purple);
+            box-shadow: 2px 2px 15px var(--dark_purple);
+        }
+    }
+}
